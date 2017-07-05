@@ -22,7 +22,7 @@ pipeline {
         echo '"PROP1 value is ${PROP1} or $PROP1 or ${env.PROP1} or $env.PROP1"'
       }
     }
-    stage('') {
+    stage('print env') {
       steps {
         sh '''env > env.txt
 '''
