@@ -24,8 +24,7 @@ pipeline {
     }
     stage('print env') {
       steps {
-        sh '''env > env.txt
-'''
+        sh 'env > env.txt'
         sh 'cat env.txt'
       }
     }
