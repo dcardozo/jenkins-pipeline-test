@@ -19,7 +19,7 @@ pipeline {
     }
     stage('Display PROP1 value') {
       steps {
-        echo 'PROP1 value is ${env.PROP1}'
+        echo 'PROP1 value is "${env.PROP1}"'
       }
     }
   }
