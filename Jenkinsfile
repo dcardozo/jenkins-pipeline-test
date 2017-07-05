@@ -11,21 +11,19 @@ pipeline {
         pwd()
       }
     }
-    stage('Sleep, then ls -1') {
+    stage('Sleep 10, then ls -1') {
       steps {
-        parallel(
-          "Sleep 10, then ls -1": {
-            sleep 10
-            sh 'ls -1'
-            
-          },
-          "Sleep 15, then pwd again": {
-            sleep 15
-            sh 'pwd'
-            
-          }
-        )
+        sleep 10
+        sh 'ls -1'
       }
     }
+    stage('Display PROP1 value') {
+      steps {
+        echo 'PROP1 value is ${PROP1}'
+      }
+    }
+  }
+  environment {
+    PROP1 = 'val1'
   }
 }
