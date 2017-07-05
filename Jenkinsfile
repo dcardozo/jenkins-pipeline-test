@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage('Display Pipeline Info') {
       steps {
-        sh 'Workspace is ${env.WORKSPACE}'
+        sh 'Workspace is ${WORKSPACE}'
       }
     }
     stage('PWD') {
