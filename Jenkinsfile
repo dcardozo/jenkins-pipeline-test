@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage('Display Pipeline Info') {
       steps {
-        echo 'Workspace is ${env.WORKSPACE}'
+        sh 'Workspace is ${env.WORKSPACE}'
       }
     }
     stage('PWD') {
@@ -19,7 +19,7 @@ pipeline {
     }
     stage('Display PROP1 value') {
       steps {
-        echo '"PROP1 value is ${PROP1} or $PROP1 or ${env.PROP1} or $env.PROP1"'
+        sh '"PROP1 value is ${PROP1} or $PROP1 or ${env.PROP1} or $env.PROP1"'
       }
     }
   }
